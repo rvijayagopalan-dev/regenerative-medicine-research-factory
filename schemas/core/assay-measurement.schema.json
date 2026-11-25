@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/rmri/schemas/assay-measurement.schema.json",
+  "title": "AssayMeasurement",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["measurement_id", "experiment_id", "assay_id", "endpoint_code", "quality_status", "schema_version"],
+  "properties": {
+    "measurement_id": {"type": "string", "format": "uuid"},
+    "experiment_id": {"type": "string", "format": "uuid"},
+    "assay_id": {"type": "string", "format": "uuid"},
+    "biospecimen_id": {"type": ["string", "null"], "format": "uuid"},
+    "cell_model_id": {"type": ["string", "null"], "format": "uuid"},
+    "replicate_id": {"type": ["string", "null"]},
+    "endpoint_code": {"type": "string"},
+    "value_numeric": {"type": ["number", "null"]},
+    "value_text": {"type": ["string", "null"]},
+    "unit_code": {"type": ["string", "null"]},
+    "observed_at": {"type": ["string", "null"], "format": "date-time"},
+    "instrument_id": {"type": ["string", "null"]},
+    "instrument_configuration_ref": {"type": ["string", "null"]},
+    "source_artifact_id": {"type": ["string", "null"], "format": "uuid"},
+    "quality_status": {"enum": ["pending", "passed", "warning", "failed", "not_assessed"]},
+    "quality_flags": {"type": "array", "items": {"type": "string"}},
+    "schema_version": {"type": "string"}
+  },
+  "oneOf": [
+    {"required": ["value_numeric"], "properties": {"value_numeric": {"type": "number"}}},
+    {"required": ["value_text"], "properties": {"value_text": {"type": "string"}}}
+  ]
+}

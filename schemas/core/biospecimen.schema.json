@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/rmri/schemas/biospecimen.schema.json",
+  "title": "Biospecimen",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["biospecimen_id", "specimen_type_code", "recorded_at", "schema_version"],
+  "properties": {
+    "biospecimen_id": {"type": "string", "format": "uuid"},
+    "subject_id": {"type": ["string", "null"], "format": "uuid"},
+    "parent_biospecimen_id": {"type": ["string", "null"], "format": "uuid"},
+    "specimen_type_code": {"type": "string"},
+    "tissue_code": {"type": ["string", "null"]},
+    "collection_datetime": {"type": ["string", "null"], "format": "date-time"},
+    "collection_site_code": {"type": ["string", "null"]},
+    "processing_protocol_id": {"type": ["string", "null"]},
+    "storage_location_ref": {"type": ["string", "null"], "description": "Reference to a restricted inventory system; do not expose physical location unnecessarily."},
+    "quality_status": {"enum": ["pending", "accepted", "rejected", "unknown"]},
+    "source_system": {"type": "string"},
+    "source_record_id": {"type": ["string", "null"]},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "schema_version": {"type": "string"}
+  }
+}

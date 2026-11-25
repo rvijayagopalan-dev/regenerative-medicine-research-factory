@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/rmri/schemas/research-subject.schema.json",
+  "title": "ResearchSubject",
+  "description": "Pseudonymous research subject record. Direct identifiers must not be stored in this schema.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["subject_id", "record_status", "created_at", "schema_version"],
+  "properties": {
+    "subject_id": {"type": "string", "format": "uuid"},
+    "cohort_id": {"type": ["string", "null"]},
+    "source_subject_refs": {"type": "array", "items": {"$ref": "#/$defs/sourceReference"}},
+    "disease_context_codes": {"type": "array", "items": {"type": "string"}},
+    "sex_at_birth_code": {"type": ["string", "null"], "description": "Use a governed code set; omit where not collected or not permitted."},
+    "age_at_collection_years": {"type": ["number", "null"], "minimum": 0, "maximum": 125},
+    "consent_reference_ids": {"type": "array", "items": {"type": "string", "format": "uuid"}},
+    "record_status": {"enum": ["active", "withdrawn", "restricted", "superseded"]},
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": ["string", "null"], "format": "date-time"},
+    "schema_version": {"type": "string"}
+  },
+  "$defs": {
+    "sourceReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_system", "source_record_id"],
+      "properties": {
+        "source_system": {"type": "string"},
+        "source_record_id": {"type": "string"},
+        "valid_from": {"type": ["string", "null"], "format": "date-time"},
+        "valid_to": {"type": ["string", "null"], "format": "date-time"}
+      }
+    }
+  }
+}

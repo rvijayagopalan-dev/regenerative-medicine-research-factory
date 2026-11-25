@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/rmri/schemas/experiment.schema.json",
+  "title": "Experiment",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["experiment_id", "research_program_id", "protocol_id", "status", "created_at", "schema_version"],
+  "properties": {
+    "experiment_id": {"type": "string", "format": "uuid"},
+    "research_program_id": {"type": "string", "format": "uuid"},
+    "cell_model_ids": {"type": "array", "items": {"type": "string", "format": "uuid"}},
+    "biospecimen_ids": {"type": "array", "items": {"type": "string", "format": "uuid"}},
+    "protocol_id": {"type": "string", "format": "uuid"},
+    "protocol_version": {"type": "string"},
+    "study_design_reference": {"type": ["string", "null"]},
+    "experimental_conditions": {"type": "object", "additionalProperties": true},
+    "planned_start": {"type": ["string", "null"], "format": "date-time"},
+    "actual_start": {"type": ["string", "null"], "format": "date-time"},
+    "actual_end": {"type": ["string", "null"], "format": "date-time"},
+    "status": {"enum": ["planned", "in_progress", "completed", "cancelled", "on_hold", "under_review"]},
+    "source_system": {"type": ["string", "null"]},
+    "source_record_id": {"type": ["string", "null"]},
+    "created_at": {"type": "string", "format": "date-time"},
+    "schema_version": {"type": "string"}
+  }
+}

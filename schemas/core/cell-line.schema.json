@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/rmri/schemas/cell-line.schema.json",
+  "title": "CellLine",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["cell_line_id", "cell_line_type", "record_status", "schema_version"],
+  "properties": {
+    "cell_line_id": {"type": "string", "format": "uuid"},
+    "biospecimen_id": {"type": ["string", "null"], "format": "uuid"},
+    "parent_cell_line_id": {"type": ["string", "null"], "format": "uuid"},
+    "cell_line_type": {"enum": ["ipsc", "primary", "immortalized", "other"]},
+    "clone_ids": {"type": "array", "items": {"type": "string", "format": "uuid"}},
+    "disease_context_codes": {"type": "array", "items": {"type": "string"}},
+    "genetic_background_reference": {"type": ["string", "null"]},
+    "characterization_artifact_ids": {"type": "array", "items": {"type": "string", "format": "uuid"}},
+    "passage_number": {"type": ["integer", "null"], "minimum": 0},
+    "record_status": {"enum": ["active", "retired", "restricted", "under_review"]},
+    "source_system": {"type": ["string", "null"]},
+    "source_record_id": {"type": ["string", "null"]},
+    "schema_version": {"type": "string"}
+  }
+}

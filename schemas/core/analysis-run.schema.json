@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/rmri/schemas/analysis-run.schema.json",
+  "title": "AnalysisRun",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["analysis_run_id", "pipeline_name", "pipeline_version", "input_dataset_refs", "status", "started_at", "schema_version"],
+  "properties": {
+    "analysis_run_id": {"type": "string", "format": "uuid"},
+    "pipeline_name": {"type": "string"},
+    "pipeline_version": {"type": "string"},
+    "git_commit": {"type": ["string", "null"]},
+    "container_image_digest": {"type": ["string", "null"]},
+    "input_dataset_refs": {"type": "array", "items": {"type": "string"}},
+    "input_artifact_ids": {"type": "array", "items": {"type": "string", "format": "uuid"}},
+    "reference_data_versions": {"type": "object", "additionalProperties": {"type": "string"}},
+    "parameters": {"type": "object"},
+    "execution_environment": {"type": "object"},
+    "output_artifact_ids": {"type": "array", "items": {"type": "string", "format": "uuid"}},
+    "quality_metrics": {"type": "object"},
+    "status": {"enum": ["queued", "running", "succeeded", "failed", "cancelled"]},
+    "started_at": {"type": "string", "format": "date-time"},
+    "completed_at": {"type": ["string", "null"], "format": "date-time"},
+    "schema_version": {"type": "string"}
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/rmri/schemas/data-artifact.schema.json",
+  "title": "DataArtifact",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["artifact_id", "artifact_type", "uri", "checksum", "classification", "ingested_at", "schema_version"],
+  "properties": {
+    "artifact_id": {"type": "string", "format": "uuid"},
+    "artifact_type": {"type": "string"},
+    "uri": {"type": "string"},
+    "media_type": {"type": ["string", "null"]},
+    "file_format": {"type": ["string", "null"]},
+    "size_bytes": {"type": ["integer", "null"], "minimum": 0},
+    "checksum": {
+      "type": "object",
+      "required": ["algorithm", "value"],
+      "properties": {
+        "algorithm": {"enum": ["sha256", "sha512", "md5", "other"]},
+        "value": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "source_system": {"type": "string"},
+    "source_record_id": {"type": ["string", "null"]},
+    "subject_id": {"type": ["string", "null"], "format": "uuid"},
+    "biospecimen_id": {"type": ["string", "null"], "format": "uuid"},
+    "experiment_id": {"type": ["string", "null"], "format": "uuid"},
+    "assay_id": {"type": ["string", "null"], "format": "uuid"},
+    "classification": {"enum": ["restricted_identity", "sensitive_research", "confidential_research", "internal", "public"]},
+    "consent_reference_ids": {"type": "array", "items": {"type": "string", "format": "uuid"}},
+    "ingested_at": {"type": "string", "format": "date-time"},
+    "schema_version": {"type": "string"}
+  }
+}
