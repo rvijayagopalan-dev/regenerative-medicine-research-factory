@@ -1,1 +1,140 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Regenerative Medicine Research Factory</title>
+<style>
+:root{--bg:#f4f7fb;--panel:#fff;--ink:#17243a;--muted:#66758b;--line:#e3e9f1;--nav:#101d32;--nav2:#172943;--teal:#087f8c;--teal2:#e4f5f5;--blue:#3569c8;--blue2:#edf3ff;--violet:#7357c8;--violet2:#f1edff;--green:#23845c;--green2:#e8f6ef;--amber:#a96b14;--amber2:#fff4df;--red:#b84b54;--shadow:0 8px 28px rgba(22,39,65,.07);--radius:16px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}button,input{font:inherit}.app{min-height:100vh;display:grid;grid-template-columns:250px 1fr}.sidebar{background:var(--nav);color:#d9e4f2;padding:22px 16px;display:flex;flex-direction:column;gap:22px}.brand{display:flex;gap:11px;align-items:center;padding:4px 8px 18px;border-bottom:1px solid #2a3b54}.brandmark{height:39px;width:39px;border-radius:12px;background:linear-gradient(135deg,#22a6a5,#5d79d8);display:grid;place-items:center;color:white;font-size:19px;font-weight:800}.brand strong{display:block;font-size:13px;letter-spacing:.02em}.brand small{color:#8fa4bd;font-size:10px}.nav-label{font-size:10px;text-transform:uppercase;letter-spacing:.13em;color:#8296b1;padding:0 10px;margin-bottom:7px}.nav{display:grid;gap:4px}.nav button{border:0;background:transparent;color:#bdcadd;text-align:left;padding:10px 11px;border-radius:9px;display:flex;align-items:center;gap:11px;cursor:pointer}.nav button:hover,.nav button.active{background:var(--nav2);color:white}.nav button.active{box-shadow:inset 3px 0 #43c0bd}.icon{width:18px;text-align:center;font-size:15px}.side-foot{margin-top:auto;background:#172943;border:1px solid #2c405c;border-radius:12px;padding:13px}.side-foot b{font-size:12px}.side-foot p{font-size:11px;color:#9fb0c6;margin:6px 0 10px}.side-foot span{font-size:10px;color:#72d0bf}.main{min-width:0}.topbar{height:68px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 30px;position:sticky;top:0;z-index:5}.crumb{font-size:12px;color:var(--muted)}.crumb b{color:var(--ink)}.top-actions{display:flex;align-items:center;gap:10px}.pill{border:1px solid var(--line);border-radius:999px;padding:7px 11px;color:#52627a;font-size:11px;background:#fff}.avatar{width:31px;height:31px;border-radius:50%;background:#e4edf9;color:#31578b;display:grid;place-items:center;font-weight:700;font-size:11px}.content{padding:27px 30px 45px;max-width:1600px;margin:auto}.hero{display:flex;justify-content:space-between;gap:22px;align-items:flex-start;margin-bottom:22px}.eyebrow{color:var(--teal);font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.hero h1{font-size:27px;line-height:1.15;margin:7px 0 8px;letter-spacing:-.035em}.hero p{color:var(--muted);max-width:710px;margin:0;font-size:13px}.hero-actions{display:flex;gap:9px;flex-wrap:wrap}.btn{border:1px solid var(--line);background:#fff;color:#34445c;border-radius:9px;padding:9px 13px;font-weight:650;font-size:11px;cursor:pointer}.btn.primary{background:#087f8c;color:white;border-color:#087f8c}.btn:hover{filter:brightness(.97);transform:translateY(-1px)}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin:20px 0}.stat{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:15px 16px;box-shadow:0 3px 12px rgba(22,39,65,.025)}.stat-top{display:flex;justify-content:space-between;color:var(--muted);font-size:11px}.stat strong{display:block;font-size:25px;letter-spacing:-.04em;margin:7px 0 2px}.trend{font-size:10px;color:var(--green)}.stat-icon{width:29px;height:29px;border-radius:9px;display:grid;place-items:center;background:var(--teal2);color:var(--teal)}.grid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(290px,.85fr);gap:15px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);min-width:0}.panel-head{padding:16px 18px 12px;display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.panel-head h2{font-size:14px;margin:0 0 3px}.panel-head p{font-size:10px;color:var(--muted);margin:0}.tag{font-size:9px;font-weight:750;padding:5px 8px;border-radius:999px;background:var(--green2);color:var(--green);white-space:nowrap}.tag.blue{background:var(--blue2);color:var(--blue)}.tag.amber{background:var(--amber2);color:var(--amber)}.architecture{padding:0 18px 18px}.arch-row{display:grid;grid-template-columns:1fr 24px 1fr 24px 1fr;align-items:stretch;gap:6px}.arch-node{border:1px solid var(--line);border-radius:11px;padding:12px 10px;min-height:92px}.arch-node .node-icon{font-size:17px;margin-bottom:7px}.arch-node b{display:block;font-size:11px;margin-bottom:4px}.arch-node small{display:block;font-size:9px;color:var(--muted);line-height:1.4}.arch-node.teal{background:#f0fafa;border-color:#cce9e9}.arch-node.blue{background:#f2f6ff;border-color:#d9e4fb}.arch-node.violet{background:#f7f4ff;border-color:#e4dcfb}.arch-node.green{background:#f0faf4;border-color:#d3eddd}.arch-arrow{display:grid;place-items:center;color:#9aa9bb;font-size:17px}.arch-down{text-align:center;color:#9aa9bb;font-size:17px;padding:5px}.arch-foundation{border:1px dashed #b9c7d8;border-radius:10px;padding:10px 12px;text-align:center;background:#f8fafc}.arch-foundation b{font-size:10px}.arch-foundation small{display:block;color:var(--muted);font-size:9px;margin-top:3px}.disease-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:0 18px 17px}.disease{border:1px solid var(--line);border-radius:11px;padding:12px;cursor:pointer;transition:.15s;background:white;text-align:left;color:inherit}.disease:hover,.disease.selected{border-color:#42a5a8;box-shadow:0 0 0 2px #d8f0ef}.disease-art{height:65px;border-radius:8px;margin-bottom:9px;display:grid;place-items:center;font-size:26px;background:linear-gradient(135deg,#e7f5f5,#eef2ff)}.disease b{font-size:11px;display:block}.disease small{font-size:9px;color:var(--muted)}.disease .mini{font-size:9px;color:var(--teal);font-weight:700;margin-top:8px;display:block}.workflow{padding:0 18px 18px}.steps{display:grid;grid-template-columns:repeat(6,1fr);gap:7px}.step{position:relative;text-align:center;padding:10px 5px;border:1px solid var(--line);border-radius:10px;background:#fbfcfe;min-height:83px}.step:not(:last-child):after{content:'›';position:absolute;right:-9px;top:26px;color:#94a4b8;font-size:19px;z-index:1}.step .n{height:23px;width:23px;border-radius:50%;margin:0 auto 7px;background:var(--blue2);color:var(--blue);display:grid;place-items:center;font-size:10px;font-weight:800}.step b{font-size:9px;display:block}.step small{font-size:8px;color:var(--muted);display:block;margin-top:3px}.right-stack{display:grid;gap:15px;align-content:start}.insight{padding:0 17px 16px}.insight-card{background:linear-gradient(135deg,#f1f8ff,#f5f1ff);border:1px solid #e1e8f7;border-radius:12px;padding:13px}.insight-card .label{font-size:9px;color:var(--violet);font-weight:800;text-transform:uppercase;letter-spacing:.1em}.insight-card h3{font-size:12px;margin:7px 0 5px}.insight-card p{font-size:10px;color:#5d6b81;margin:0 0 10px}.confidence{height:5px;background:#e0e5ef;border-radius:9px;overflow:hidden}.confidence span{display:block;height:100%;width:72%;background:linear-gradient(90deg,#4d9ba5,#806bd0);border-radius:9px}.capabilities{padding:0 17px 16px;display:grid;gap:10px}.cap{display:flex;gap:10px;align-items:center}.cap-icon{height:31px;width:31px;border-radius:9px;background:var(--teal2);display:grid;place-items:center;color:var(--teal);font-size:15px;flex:0 0 auto}.cap b{display:block;font-size:10px}.cap small{display:block;font-size:9px;color:var(--muted)}.roadmap{padding:0 18px 18px}.road-row{display:grid;grid-template-columns:105px 1fr 53px;align-items:center;gap:11px;margin:12px 0}.road-row b{font-size:10px}.road-row small{font-size:9px;color:var(--muted);display:block}.road-bar{height:7px;background:#edf1f6;border-radius:9px;overflow:hidden}.road-bar span{display:block;height:100%;background:linear-gradient(90deg,#37a4a2,#6384cf);border-radius:9px}.road-row em{font-size:9px;color:var(--muted);font-style:normal;text-align:right}.footer{padding:20px 30px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:10px}.modal-back{position:fixed;inset:0;background:rgba(13,26,44,.45);display:none;place-items:center;z-index:20;padding:20px}.modal-back.open{display:grid}.modal{background:white;border-radius:15px;max-width:560px;width:100%;padding:22px;box-shadow:0 20px 60px rgba(0,0,0,.2)}.modal h2{font-size:17px;margin:0 0 6px}.modal p{color:var(--muted);font-size:12px}.modal pre{white-space:pre-wrap;background:#f6f8fb;padding:13px;border-radius:9px;font:11px/1.5 ui-monospace,monospace;color:#39485d}.modal-actions{display:flex;justify-content:flex-end;gap:8px}.toast{position:fixed;bottom:22px;right:24px;background:#172943;color:white;padding:11px 15px;border-radius:9px;font-size:11px;box-shadow:var(--shadow);opacity:0;transform:translateY(8px);transition:.2s;z-index:30}.toast.show{opacity:1;transform:translateY(0)}
+@media(max-width:1050px){.app{grid-template-columns:210px 1fr}.grid{grid-template-columns:1fr}.right-stack{grid-template-columns:repeat(2,1fr)}}@media(max-width:760px){.app{grid-template-columns:1fr}.sidebar{position:relative;padding:12px;gap:12px}.brand{border:0;padding:4px}.nav{grid-template-columns:repeat(4,1fr)}.nav button{font-size:0;justify-content:center;padding:10px}.nav button .icon{font-size:16px}.nav-label,.side-foot{display:none}.topbar{padding:0 16px}.content{padding:20px 15px}.hero{display:block}.hero-actions{margin-top:14px}.stats{grid-template-columns:repeat(2,1fr)}.arch-row{grid-template-columns:1fr}.arch-arrow,.arch-down{transform:rotate(90deg);height:15px}.disease-grid{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}.step:after{display:none}.right-stack{grid-template-columns:1fr}.footer{padding:18px;display:block}.footer span{display:block;margin:4px 0}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><div class="brandmark">R</div><div><strong>REGENERATIVE MEDICINE</strong><small>RESEARCH FACTORY · CONCEPT</small></div></div>
+  <div><div class="nav-label">Research workspace</div><nav class="nav">
+    <button class="active" data-section="overview"><span class="icon">▦</span>Research Overview</button>
+    <button data-section="models"><span class="icon">◉</span>Disease & Cell Models</button>
+    <button data-section="experiments"><span class="icon">⚗</span>Experiments & Assays</button>
+    <button data-section="data"><span class="icon">▤</span>Research Data Fabric</button>
+    <button data-section="knowledge"><span class="icon">◎</span>Scientific Knowledge Graph</button>
+    <button data-section="ai"><span class="icon">✧</span>AI & Analytics</button>
+    <button data-section="governance"><span class="icon">◇</span>Governance & Trust</button>
+    <button data-section="operations"><span class="icon">⌘</span>Platform Operations</button>
+  </nav></div>
+  <div class="side-foot"><b>Research environment</b><p>Conceptual workspace · Synthetic data only</p><span>● Architecture demonstrator</span></div>
+</aside>
+<main class="main">
+  <header class="topbar"><div class="crumb">Research workspace&nbsp; / &nbsp;<b id="crumb">Research Overview</b></div><div class="top-actions"><span class="pill">Concept demo · v0.1</span><span class="pill">Research environment</span><div class="avatar">RR</div></div></header>
+  <div class="content">
+    <section class="hero"><div><div class="eyebrow">Integrated scientific discovery platform</div><h1>Regenerative Medicine Research Factory</h1><p>Connect iPSC-based disease modeling, functional assays, biomedical data, scientific knowledge and AI-driven analytics in one governed research ecosystem.</p></div><div class="hero-actions"><button class="btn" id="exportBtn">↗ Export platform brief</button><button class="btn primary" id="architectureBtn">Explore architecture →</button></div></section>
+    <section class="stats">
+      <div class="stat"><div class="stat-top"><span>Research programs</span><span class="stat-icon">⌬</span></div><strong>03</strong><span class="trend">Parkinson's · ALS · Retinal</span></div>
+      <div class="stat"><div class="stat-top"><span>Platform capabilities</span><span class="stat-icon">◈</span></div><strong>08</strong><span class="trend">Integrated capability domains</span></div>
+      <div class="stat"><div class="stat-top"><span>Research lifecycle</span><span class="stat-icon">⟲</span></div><strong>06</strong><span class="trend">Traceable stages</span></div>
+      <div class="stat"><div class="stat-top"><span>Delivery horizon</span><span class="stat-icon">⌁</span></div><strong>12 mo</strong><span class="trend">Illustrative roadmap</span></div>
+    </section>
+    <div class="grid">
+      <div class="left-stack">
+        <section class="panel" id="architecture">
+          <div class="panel-head"><div><h2>Enterprise research reference architecture</h2><p>Scientific applications through data, knowledge, AI and cloud foundation</p></div><span class="tag blue">Target state</span></div>
+          <div class="architecture">
+            <div class="arch-row">
+              <div class="arch-node teal"><div class="node-icon">🧫</div><b>Research & disease models</b><small>iPSC lines · Cell models · Organoids · Disease programs</small></div><div class="arch-arrow">→</div>
+              <div class="arch-node blue"><div class="node-icon">⚗️</div><b>Experiments & functional assays</b><small>Protocols · Assay execution · Instrument data · Phenotyping</small></div><div class="arch-arrow">→</div>
+              <div class="arch-node violet"><div class="node-icon">🧬</div><b>Scientific research workspace</b><small>Research portal · Collaboration · Discovery workflows</small></div>
+            </div>
+            <div class="arch-down">↓</div>
+            <div class="arch-row">
+              <div class="arch-node blue"><div class="node-icon">▤</div><b>Biomedical data fabric</b><small>Ingestion · Lakehouse · Metadata · Data products</small></div><div class="arch-arrow">↔</div>
+              <div class="arch-node violet"><div class="node-icon">◎</div><b>Scientific knowledge fabric</b><small>Ontology · Knowledge graph · Provenance · Evidence</small></div><div class="arch-arrow">↔</div>
+              <div class="arch-node green"><div class="node-icon">✧</div><b>AI & computational research</b><small>Omics · Imaging · Multimodal AI · ModelOps</small></div>
+            </div>
+            <div class="arch-down">↓</div>
+            <div class="arch-foundation"><b>Enterprise technology & trust foundation</b><small>Cloud infrastructure · Identity · Security · Consent · Governance · Observability · DevSecOps · FinOps</small></div>
+          </div>
+        </section>
+        <section class="panel" id="models" style="margin-top:15px">
+          <div class="panel-head"><div><h2>Disease & cell-model research programs</h2><p>Select a program to focus the research workspace</p></div><span class="tag">3 programs</span></div>
+          <div class="disease-grid">
+            <button class="disease selected" data-disease="Parkinson's disease"><div class="disease-art">🧠</div><b>Parkinson's disease</b><small>Dopaminergic neuron models</small><span class="mini">View research scope →</span></button>
+            <button class="disease" data-disease="Amyotrophic lateral sclerosis (ALS)"><div class="disease-art">🧬</div><b>Amyotrophic lateral sclerosis</b><small>Motor neuron disease models</small><span class="mini">View research scope →</span></button>
+            <button class="disease" data-disease="Selected retinal diseases"><div class="disease-art">👁️</div><b>Selected retinal diseases</b><small>Retinal organoids · RPE</small><span class="mini">View research scope →</span></button>
+          </div>
+        </section>
+        <section class="panel" id="experiments" style="margin-top:15px">
+          <div class="panel-head"><div><h2>Research digital thread</h2><p>Traceability across the biological and experimental lifecycle</p></div><span class="tag blue">Core capability</span></div>
+          <div class="workflow"><div class="steps">
+            <div class="step"><div class="n">1</div><b>Donor / subject</b><small>Consent · cohort</small></div>
+            <div class="step"><div class="n">2</div><b>Sample</b><small>Biospecimen</small></div>
+            <div class="step"><div class="n">3</div><b>iPSC line</b><small>Clone · QC</small></div>
+            <div class="step"><div class="n">4</div><b>Differentiation</b><small>Protocol · batch</small></div>
+            <div class="step"><div class="n">5</div><b>Experiment / assay</b><small>Conditions · results</small></div>
+            <div class="step"><div class="n">6</div><b>Evidence</b><small>Phenotype · finding</small></div>
+          </div></div>
+        </section>
+        <section class="panel" id="data" style="margin-top:15px">
+          <div class="panel-head"><div><h2>Biomedical research data fabric</h2><p>Heterogeneous scientific data organized for governed reuse and AI readiness</p></div><button class="btn" id="catalogBtn">View catalog</button></div>
+          <div class="workflow"><div class="steps" style="grid-template-columns:repeat(4,1fr)">
+            <div class="step"><div class="n">01</div><b>Raw research data</b><small>FASTQ · Images · Instrument files</small></div>
+            <div class="step"><div class="n">02</div><b>Standardized data</b><small>Schema · QC · Metadata</small></div>
+            <div class="step"><div class="n">03</div><b>Research data products</b><small>Curated · Linked · Versioned</small></div>
+            <div class="step"><div class="n">04</div><b>AI-ready datasets</b><small>Features · Embeddings · Cohorts</small></div>
+          </div></div>
+        </section>
+      </div>
+      <div class="right-stack">
+        <section class="panel" id="ai">
+          <div class="panel-head"><div><h2>AI research intelligence</h2><p>Illustrative research insight card</p></div><span class="tag amber">Concept</span></div>
+          <div class="insight"><div class="insight-card"><div class="label">Research hypothesis workspace</div><h3 id="insightTitle">Mitochondrial function & neuronal phenotype</h3><p id="insightDesc">Explore whether mitochondrial activity measurements associate with molecular signatures and functional phenotypes in iPSC-derived dopaminergic neuron models.</p><div class="confidence"><span></span></div><small style="display:block;margin-top:6px;color:#69758b;font-size:9px">Illustrative relevance indicator · Not a scientific confidence score</small></div></div>
+        </section>
+        <section class="panel" id="knowledge">
+          <div class="panel-head"><div><h2>Scientific knowledge fabric</h2><p>Connect domain entities and evidence</p></div><span class="tag blue">Semantic layer</span></div>
+          <div class="capabilities">
+            <div class="cap"><div class="cap-icon">◉</div><div><b>Biomedical ontology</b><small>Cell types · Disease · Anatomy · Genes</small></div></div>
+            <div class="cap"><div class="cap-icon">⌘</div><div><b>Knowledge graph</b><small>Entities · Relationships · Pathways</small></div></div>
+            <div class="cap"><div class="cap-icon">⛓</div><div><b>Research provenance</b><small>Lineage · Derivation · Attribution</small></div></div>
+          </div>
+        </section>
+        <section class="panel" id="governance">
+          <div class="panel-head"><div><h2>Governance & trust fabric</h2><p>Controls across research data and AI lifecycle</p></div><span class="tag">Cross-cutting</span></div>
+          <div class="capabilities">
+            <div class="cap"><div class="cap-icon">♙</div><div><b>Identity & access</b><small>RBAC · ABAC · Research environments</small></div></div>
+            <div class="cap"><div class="cap-icon">◇</div><div><b>Consent & permitted use</b><small>Donor consent · Use restrictions</small></div></div>
+            <div class="cap"><div class="cap-icon">▣</div><div><b>Audit & reproducibility</b><small>Immutable logs · Dataset and model lineage</small></div></div>
+          </div>
+        </section>
+        <section class="panel" id="operations">
+          <div class="panel-head"><div><h2>Factory delivery roadmap</h2><p>Illustrative 12-month capability rollout</p></div><span class="tag amber">Proposed</span></div>
+          <div class="roadmap">
+            <div class="road-row"><b>Foundation</b><div><div class="road-bar"><span style="width:100%"></span></div><small>Cloud, security, governance</small></div><em>M1–2</em></div>
+            <div class="road-row"><b>Data fabric</b><div><div class="road-bar"><span style="width:70%"></span></div><small>Ingestion, lakehouse, catalog</small></div><em>M3–4</em></div>
+            <div class="road-row"><b>Knowledge</b><div><div class="road-bar"><span style="width:45%"></span></div><small>Ontology, graph, traceability</small></div><em>M5–7</em></div>
+            <div class="road-row"><b>AI / ML</b><div><div class="road-bar"><span style="width:25%"></span></div><small>Imaging, omics, functional analytics</small></div><em>M8–10</em></div>
+            <div class="road-row"><b>Intelligence</b><div><div class="road-bar"><span style="width:10%"></span></div><small>Multimodal research assistant</small></div><em>M11–12</em></div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <footer class="footer"><span>Regenerative Medicine Research Factory · Conceptual product vision and architecture demonstrator</span><span>Illustrative content only · Not a validated clinical or scientific system</span></footer>
+</main>
+</div>
+<div class="toast" id="toast"></div>
+<div class="modal-back" id="modal"><div class="modal"><h2 id="modalTitle">Platform brief</h2><p id="modalDesc">A concise architecture summary.</p><pre id="modalText"></pre><div class="modal-actions"><button class="btn" id="closeModal">Close</button><button class="btn primary" id="copyBtn">Copy brief</button></div></div></div>
+<script>
+const toast=document.getElementById('toast');let toastTimer;function notify(msg){toast.textContent=msg;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2600)}
+const sections={overview:'Research Overview',models:'Disease & Cell Models',experiments:'Experiments & Assays',data:'Research Data Fabric',knowledge:'Scientific Knowledge Graph',ai:'AI & Analytics',governance:'Governance & Trust',operations:'Platform Operations'};
+document.querySelectorAll('.nav button').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const key=btn.dataset.section;document.getElementById('crumb').textContent=sections[key];const target={overview:'.hero',models:'#models',experiments:'#experiments',data:'#data',knowledge:'#knowledge',ai:'.insight-card',governance:'#governance',operations:'#operations'}[key];document.querySelector(target)?.scrollIntoView({behavior:'smooth',block:'center'});if(key==='ai')notify('AI & Analytics: illustrative research insight is shown in the workspace.')}));
+document.querySelectorAll('.disease').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.disease').forEach(b=>b.classList.remove('selected'));btn.classList.add('selected');const d=btn.dataset.disease;document.getElementById('crumb').textContent=d;document.getElementById('insightTitle').textContent=d+': research hypothesis workspace';document.getElementById('insightDesc').textContent='Explore disease-specific molecular signatures, cellular phenotypes and functional assay observations across relevant iPSC-derived research models. Validate hypotheses through experimental evidence.';notify('Research scope selected: '+d)}));
+const brief=`REGENERATIVE MEDICINE RESEARCH FACTORY\n\nVISION\nAn integrated scientific discovery platform connecting iPSC disease models, functional assays, biomedical data, scientific knowledge and AI-enabled analytics.\n\nINITIAL RESEARCH PROGRAMS\n• Parkinson's disease\n• Amyotrophic lateral sclerosis (ALS)\n• Selected retinal diseases\n\nCORE FACTORY CAPABILITIES\n1. Research & disease modeling: donor/sample registry, iPSC lines, clones, organoids, differentiation protocols.\n2. Experiments & functional assays: protocol management, assay execution, instruments, phenotyping and measurements.\n3. Biomedical data fabric: omics, imaging, clinical and experimental data ingestion; lakehouse; catalog; quality; lineage.\n4. Scientific knowledge fabric: ontology, knowledge graph, provenance, evidence and research relationships.\n5. AI & analytics: imaging, transcriptomics, functional analytics, multimodal models and research decision support.\n6. Governance & trust: consent, permitted use, privacy, identity, audit, reproducibility and AI governance.\n\nRESEARCH DIGITAL THREAD\nDonor/subject → sample/biospecimen → iPSC line/clone → differentiation → experiment/assay → measurements/phenotypes → findings/evidence.\n\nREFERENCE TECHNOLOGIES\nCloud object storage; Delta Lake or Apache Iceberg; Databricks/Spark; Nextflow/Airflow; Kubernetes/HPC/GPU; Python/PyTorch; MLflow; biomedical ontologies and graph database; Terraform; GitHub Actions; OpenTelemetry. Select the final stack through requirements and proof-of-concept validation.\n\nDELIVERY ROADMAP\nMonths 1–2: architecture, cloud foundation, security and governance.\nMonths 3–4: research data integration and lakehouse.\nMonths 5–7: ontology, knowledge graph and traceability.\nMonths 8–10: AI/ML and scientific analytics.\nMonths 11–12: multimodal research intelligence and assistant.\n\nIMPORTANT\nThis is a conceptual demonstrator. All counts, statuses, readiness indicators and AI insight scores are illustrative placeholders. No live laboratory, patient, experimental or clinical data is connected. The platform is not validated for clinical decision-making.`;
+function openModal(title,desc,text){document.getElementById('modalTitle').textContent=title;document.getElementById('modalDesc').textContent=desc;document.getElementById('modalText').textContent=text;document.getElementById('modal').classList.add('open')}
+document.getElementById('architectureBtn').addEventListener('click',()=>{document.getElementById('architecture').scrollIntoView({behavior:'smooth',block:'center'});notify('Architecture view focused')});
+document.getElementById('exportBtn').addEventListener('click',()=>openModal('Platform architecture brief','Copy this concise concept brief for planning and review.',brief));
+document.getElementById('catalogBtn').addEventListener('click',()=>openModal('Research data catalog','Illustrative catalog entries and candidate standards.','iPSC line registry — structured research metadata\nRNA-seq expression — FASTQ, count matrices, experiment metadata\nHigh-content imaging — OME-NGFF and image metadata\nFunctional assay results — assay-specific schema, units and endpoints\n\nDesign principles:\n• Keep raw scientific artifacts in object storage.\n• Store metadata, relationships and access policies in governed services.\n• Preserve source, protocol, instrument, batch and transformation provenance.\n• Apply domain standards where appropriate rather than enforcing one schema on all modalities.'));
+document.getElementById('closeModal').addEventListener('click',()=>document.getElementById('modal').classList.remove('open'));document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')e.currentTarget.classList.remove('open')});document.getElementById('copyBtn').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(document.getElementById('modalText').textContent);notify('Brief copied to clipboard')}catch(e){notify('Clipboard access unavailable; select and copy the brief manually')}});
+</script>
+</body>
+</html>
